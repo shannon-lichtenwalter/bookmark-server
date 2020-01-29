@@ -90,6 +90,23 @@ bookmarksRouter
   .get((req, res) => {
     return res.status(200).json(serializeBookmark(res.bookmark));
   })
+  //practicing
+  // .patch(bodyParser, (req, res, next) => {
+  //   const knexInstance = req.app.get('db');
+  //   const id = req.params.id;
+  //   const { title, rating, description, url } = req.body;
+  //   const newData = { title, rating, description, url };
+
+//   if (!title && !rating && !description && !url) {
+//     return res.status(400).json({ error: {message: 'fields to update must include title, rating, url, or description' }});
+//   }
+//   BookmarksService.updateBookmark(knexInstance, id, newData)
+//     .then(() => {
+//       return res.status(204).end();
+//     })
+//     .catch(next);
+// })
+
   .patch(bodyParser, (req, res, next) => {
     const knexInstance = req.app.get('db');
     const { id } = req.params;
@@ -111,6 +128,18 @@ bookmarksRouter
       })
       .catch(next);
   })
+// practicing
+  // .delete((req, res, next) => {
+  //   const knexInstance = req.app.get('db');
+  //   const id = req.params.id;
+
+  //   BookmarksService.deleteBookmark(knexInstance, id)
+  //     .then(() => {
+  //       res.status(204).end();
+  //     })
+  //     .catch(next);
+  // })
+
   .delete((req, res) => {
     const knexInstance = req.app.get('db');
     const { id } = req.params;
