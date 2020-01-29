@@ -12,3 +12,5 @@ Client repo: https://github.com/shannon-lichtenwalter/bookmark-app-connected-to-
 Server repo: https://github.com/shannon-lichtenwalter/bookmark-server 
 
 
+#### Tech Stack
+Deployed via Heroku and created with PostgreSQL, Express, and NodeJS.
